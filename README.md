@@ -1,3 +1,21 @@
+# Note from Rishi and Avra Labs
+
+This repository contains the modifications made to the OptiKey project so that via interprocess communication it can be shown and hidden. This project does compile to a standalone program, however to make best use of it, another application (remote application such as mouse replacement software) will be required to use IpcSharedObject found in App.xaml.cs.
+
+The main changes between this Avra Labs version and the original Optikey source code:
+* Keyboard is designed to use half of the screen at all times, top or bottom can be controlled by remote application
+* Keyboard is designed to be shown and hidden at will of the remote application, as well as typing speed
+* Keyboard keys have been arranged differently, and layout is only supported for English language
+* The glow effect of the keyboard keys upon hover is different so that there is no red outline, and instead key text changes
+* If there's a second eye-tracking calibration stage, it's data can be retrieved from the remote application and applied for potentially improved accuracy in determining the correct keyboard key to select with eyes (CalibrationAdjusterStatic.cs)
+
+All below text in the readme is from the original Optikey project.
+
+
+
+
+
+
 # OptiKey
 
 OptiKey is an assistive on-screen keyboard which runs on Windows. It is designed to be used with an eye-tracking device to assist with keyboard and mouse control for those living with motor and speech limitations, such as Amyotrophic Lateral Sclerosis (ALS) / Motor Neuron Disease (MND).
